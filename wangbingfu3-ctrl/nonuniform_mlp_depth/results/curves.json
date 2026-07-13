@@ -1,0 +1,882 @@
+{
+  "depth": 12,
+  "seed": 42,
+  "max_steps": 80000,
+  "max_tokens": 1310720000,
+  "total_batch_size": 16384,
+  "sequence_len": 512,
+  "parameters_per_arm": 162203904,
+  "note": "1.31B tokens/arm (~8 tok/param, ~0.4x Chinchilla-optimal for 162M). Single seed (42).",
+  "arms": [
+    {
+      "arm": "uniform",
+      "trunk_class": null,
+      "profile": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "profile_sum": 48,
+      "trajectory": [
+        {
+          "step": 5,
+          "tokens": 98304,
+          "val": 10.4383
+        },
+        {
+          "step": 7,
+          "tokens": 131072,
+          "val": 10.0014
+        },
+        {
+          "step": 10,
+          "tokens": 180224,
+          "val": 9.2614
+        },
+        {
+          "step": 14,
+          "tokens": 245760,
+          "val": 8.4553
+        },
+        {
+          "step": 19,
+          "tokens": 327680,
+          "val": 8.1206
+        },
+        {
+          "step": 27,
+          "tokens": 458752,
+          "val": 8.407
+        },
+        {
+          "step": 37,
+          "tokens": 622592,
+          "val": 8.1828
+        },
+        {
+          "step": 52,
+          "tokens": 868352,
+          "val": 7.875
+        },
+        {
+          "step": 72,
+          "tokens": 1196032,
+          "val": 7.313
+        },
+        {
+          "step": 101,
+          "tokens": 1671168,
+          "val": 7.1152
+        },
+        {
+          "step": 141,
+          "tokens": 2326528,
+          "val": 6.9237
+        },
+        {
+          "step": 197,
+          "tokens": 3244032,
+          "val": 6.6931
+        },
+        {
+          "step": 275,
+          "tokens": 4521984,
+          "val": 6.45
+        },
+        {
+          "step": 383,
+          "tokens": 6291456,
+          "val": 6.2371
+        },
+        {
+          "step": 535,
+          "tokens": 8781824,
+          "val": 6.0404
+        },
+        {
+          "step": 747,
+          "tokens": 12255232,
+          "val": 5.7613
+        },
+        {
+          "step": 1043,
+          "tokens": 17104896,
+          "val": 5.5743
+        },
+        {
+          "step": 1457,
+          "tokens": 23887872,
+          "val": 5.405
+        },
+        {
+          "step": 2034,
+          "tokens": 33341440,
+          "val": 5.2807
+        },
+        {
+          "step": 2840,
+          "tokens": 46546944,
+          "val": 5.1642
+        },
+        {
+          "step": 3966,
+          "tokens": 64995328,
+          "val": 5.0315
+        },
+        {
+          "step": 5538,
+          "tokens": 90750976,
+          "val": 4.9201
+        },
+        {
+          "step": 7732,
+          "tokens": 126697472,
+          "val": 4.7828
+        },
+        {
+          "step": 10796,
+          "tokens": 176898048,
+          "val": 4.679
+        },
+        {
+          "step": 15074,
+          "tokens": 246988800,
+          "val": 4.6318
+        },
+        {
+          "step": 21048,
+          "tokens": 344866816,
+          "val": 4.5948
+        },
+        {
+          "step": 29388,
+          "tokens": 481509376,
+          "val": 4.5749
+        },
+        {
+          "step": 41034,
+          "tokens": 672317440,
+          "val": 4.5838
+        },
+        {
+          "step": 57295,
+          "tokens": 938737664,
+          "val": 4.5944
+        },
+        {
+          "step": 79999,
+          "tokens": 1310720000,
+          "val": 4.6331
+        }
+      ],
+      "final_val": 4.6331,
+      "median_tokens_per_second": 51912,
+      "median_mfu_percent": 4.19
+    },
+    {
+      "arm": "ascending",
+      "trunk_class": "trunk.AscendingGPT",
+      "profile": [
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6
+      ],
+      "profile_sum": 48,
+      "trajectory": [
+        {
+          "step": 5,
+          "tokens": 98304,
+          "val": 10.4421
+        },
+        {
+          "step": 7,
+          "tokens": 131072,
+          "val": 10.0058
+        },
+        {
+          "step": 10,
+          "tokens": 180224,
+          "val": 9.2633
+        },
+        {
+          "step": 14,
+          "tokens": 245760,
+          "val": 8.456
+        },
+        {
+          "step": 19,
+          "tokens": 327680,
+          "val": 8.1197
+        },
+        {
+          "step": 27,
+          "tokens": 458752,
+          "val": 8.4094
+        },
+        {
+          "step": 37,
+          "tokens": 622592,
+          "val": 8.1858
+        },
+        {
+          "step": 52,
+          "tokens": 868352,
+          "val": 7.9599
+        },
+        {
+          "step": 72,
+          "tokens": 1196032,
+          "val": 7.3144
+        },
+        {
+          "step": 101,
+          "tokens": 1671168,
+          "val": 7.105
+        },
+        {
+          "step": 141,
+          "tokens": 2326528,
+          "val": 6.9074
+        },
+        {
+          "step": 197,
+          "tokens": 3244032,
+          "val": 6.6765
+        },
+        {
+          "step": 275,
+          "tokens": 4521984,
+          "val": 6.4249
+        },
+        {
+          "step": 383,
+          "tokens": 6291456,
+          "val": 6.2099
+        },
+        {
+          "step": 535,
+          "tokens": 8781824,
+          "val": 5.9824
+        },
+        {
+          "step": 747,
+          "tokens": 12255232,
+          "val": 5.7114
+        },
+        {
+          "step": 1043,
+          "tokens": 17104896,
+          "val": 5.5324
+        },
+        {
+          "step": 1457,
+          "tokens": 23887872,
+          "val": 5.3688
+        },
+        {
+          "step": 2034,
+          "tokens": 33341440,
+          "val": 5.2106
+        },
+        {
+          "step": 2840,
+          "tokens": 46546944,
+          "val": 5.0853
+        },
+        {
+          "step": 3966,
+          "tokens": 64995328,
+          "val": 4.953
+        },
+        {
+          "step": 5538,
+          "tokens": 90750976,
+          "val": 4.8789
+        },
+        {
+          "step": 7732,
+          "tokens": 126697472,
+          "val": 4.7676
+        },
+        {
+          "step": 10796,
+          "tokens": 176898048,
+          "val": 4.6924
+        },
+        {
+          "step": 15074,
+          "tokens": 246988800,
+          "val": 4.678
+        },
+        {
+          "step": 21048,
+          "tokens": 344866816,
+          "val": 4.7058
+        },
+        {
+          "step": 29388,
+          "tokens": 481509376,
+          "val": 4.6148
+        },
+        {
+          "step": 41034,
+          "tokens": 672317440,
+          "val": 4.6343
+        },
+        {
+          "step": 57295,
+          "tokens": 938737664,
+          "val": 4.57
+        },
+        {
+          "step": 79999,
+          "tokens": 1310720000,
+          "val": 4.6341
+        }
+      ],
+      "final_val": 4.6341,
+      "median_tokens_per_second": 78018,
+      "median_mfu_percent": 6.3
+    },
+    {
+      "arm": "descending",
+      "trunk_class": "trunk.DescendingGPT",
+      "profile": [
+        6,
+        6,
+        5,
+        5,
+        5,
+        5,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2
+      ],
+      "profile_sum": 48,
+      "trajectory": [
+        {
+          "step": 5,
+          "tokens": 98304,
+          "val": 10.4363
+        },
+        {
+          "step": 7,
+          "tokens": 131072,
+          "val": 9.9999
+        },
+        {
+          "step": 10,
+          "tokens": 180224,
+          "val": 9.2607
+        },
+        {
+          "step": 14,
+          "tokens": 245760,
+          "val": 8.4557
+        },
+        {
+          "step": 19,
+          "tokens": 327680,
+          "val": 8.1207
+        },
+        {
+          "step": 27,
+          "tokens": 458752,
+          "val": 8.4113
+        },
+        {
+          "step": 37,
+          "tokens": 622592,
+          "val": 8.1783
+        },
+        {
+          "step": 52,
+          "tokens": 868352,
+          "val": 7.8165
+        },
+        {
+          "step": 72,
+          "tokens": 1196032,
+          "val": 7.3008
+        },
+        {
+          "step": 101,
+          "tokens": 1671168,
+          "val": 7.1207
+        },
+        {
+          "step": 141,
+          "tokens": 2326528,
+          "val": 6.9104
+        },
+        {
+          "step": 197,
+          "tokens": 3244032,
+          "val": 6.7007
+        },
+        {
+          "step": 275,
+          "tokens": 4521984,
+          "val": 6.4589
+        },
+        {
+          "step": 383,
+          "tokens": 6291456,
+          "val": 6.2582
+        },
+        {
+          "step": 535,
+          "tokens": 8781824,
+          "val": 6.0534
+        },
+        {
+          "step": 747,
+          "tokens": 12255232,
+          "val": 5.8036
+        },
+        {
+          "step": 1043,
+          "tokens": 17104896,
+          "val": 5.615
+        },
+        {
+          "step": 1457,
+          "tokens": 23887872,
+          "val": 5.4933
+        },
+        {
+          "step": 2034,
+          "tokens": 33341440,
+          "val": 5.4839
+        },
+        {
+          "step": 2840,
+          "tokens": 46546944,
+          "val": 5.421
+        },
+        {
+          "step": 3966,
+          "tokens": 64995328,
+          "val": 5.0484
+        },
+        {
+          "step": 5538,
+          "tokens": 90750976,
+          "val": 4.9448
+        },
+        {
+          "step": 7732,
+          "tokens": 126697472,
+          "val": 4.8424
+        },
+        {
+          "step": 10796,
+          "tokens": 176898048,
+          "val": 4.7461
+        },
+        {
+          "step": 15074,
+          "tokens": 246988800,
+          "val": 4.7328
+        },
+        {
+          "step": 21048,
+          "tokens": 344866816,
+          "val": 4.6842
+        },
+        {
+          "step": 29388,
+          "tokens": 481509376,
+          "val": 4.6451
+        },
+        {
+          "step": 41034,
+          "tokens": 672317440,
+          "val": 4.6232
+        },
+        {
+          "step": 57295,
+          "tokens": 938737664,
+          "val": 4.5844
+        },
+        {
+          "step": 79999,
+          "tokens": 1310720000,
+          "val": 4.7762
+        }
+      ],
+      "final_val": 4.7762,
+      "median_tokens_per_second": 51903,
+      "median_mfu_percent": 4.19
+    },
+    {
+      "arm": "hourglass",
+      "trunk_class": "trunk.HourglassGPT",
+      "profile": [
+        6,
+        6,
+        4,
+        4,
+        2,
+        2,
+        2,
+        2,
+        4,
+        4,
+        6,
+        6
+      ],
+      "profile_sum": 48,
+      "trajectory": [
+        {
+          "step": 5,
+          "tokens": 98304,
+          "val": 10.4391
+        },
+        {
+          "step": 7,
+          "tokens": 131072,
+          "val": 10.0029
+        },
+        {
+          "step": 10,
+          "tokens": 180224,
+          "val": 9.2629
+        },
+        {
+          "step": 14,
+          "tokens": 245760,
+          "val": 8.4572
+        },
+        {
+          "step": 19,
+          "tokens": 327680,
+          "val": 8.1194
+        },
+        {
+          "step": 27,
+          "tokens": 458752,
+          "val": 8.4138
+        },
+        {
+          "step": 37,
+          "tokens": 622592,
+          "val": 8.1809
+        },
+        {
+          "step": 52,
+          "tokens": 868352,
+          "val": 7.9111
+        },
+        {
+          "step": 72,
+          "tokens": 1196032,
+          "val": 7.2944
+        },
+        {
+          "step": 101,
+          "tokens": 1671168,
+          "val": 7.1135
+        },
+        {
+          "step": 141,
+          "tokens": 2326528,
+          "val": 6.9108
+        },
+        {
+          "step": 197,
+          "tokens": 3244032,
+          "val": 6.6908
+        },
+        {
+          "step": 275,
+          "tokens": 4521984,
+          "val": 6.4469
+        },
+        {
+          "step": 383,
+          "tokens": 6291456,
+          "val": 6.2547
+        },
+        {
+          "step": 535,
+          "tokens": 8781824,
+          "val": 6.0645
+        },
+        {
+          "step": 747,
+          "tokens": 12255232,
+          "val": 5.8122
+        },
+        {
+          "step": 1043,
+          "tokens": 17104896,
+          "val": 5.6115
+        },
+        {
+          "step": 1457,
+          "tokens": 23887872,
+          "val": 5.4406
+        },
+        {
+          "step": 2034,
+          "tokens": 33341440,
+          "val": 5.2788
+        },
+        {
+          "step": 2840,
+          "tokens": 46546944,
+          "val": 5.1408
+        },
+        {
+          "step": 3966,
+          "tokens": 64995328,
+          "val": 4.9843
+        },
+        {
+          "step": 5538,
+          "tokens": 90750976,
+          "val": 4.9016
+        },
+        {
+          "step": 7732,
+          "tokens": 126697472,
+          "val": 4.8092
+        },
+        {
+          "step": 10796,
+          "tokens": 176898048,
+          "val": 4.7065
+        },
+        {
+          "step": 15074,
+          "tokens": 246988800,
+          "val": 4.6291
+        },
+        {
+          "step": 21048,
+          "tokens": 344866816,
+          "val": 4.6019
+        },
+        {
+          "step": 29388,
+          "tokens": 481509376,
+          "val": 4.5889
+        },
+        {
+          "step": 41034,
+          "tokens": 672317440,
+          "val": 4.6053
+        },
+        {
+          "step": 57295,
+          "tokens": 938737664,
+          "val": 4.5676
+        },
+        {
+          "step": 79999,
+          "tokens": 1310720000,
+          "val": 4.6129
+        }
+      ],
+      "final_val": 4.6129,
+      "median_tokens_per_second": 78028,
+      "median_mfu_percent": 6.3
+    },
+    {
+      "arm": "diamond",
+      "trunk_class": "trunk.DiamondGPT",
+      "profile": [
+        2,
+        2,
+        4,
+        4,
+        6,
+        6,
+        6,
+        6,
+        4,
+        4,
+        2,
+        2
+      ],
+      "profile_sum": 48,
+      "trajectory": [
+        {
+          "step": 5,
+          "tokens": 98304,
+          "val": 10.4396
+        },
+        {
+          "step": 7,
+          "tokens": 131072,
+          "val": 10.0041
+        },
+        {
+          "step": 10,
+          "tokens": 180224,
+          "val": 9.2631
+        },
+        {
+          "step": 14,
+          "tokens": 245760,
+          "val": 8.4568
+        },
+        {
+          "step": 19,
+          "tokens": 327680,
+          "val": 8.1203
+        },
+        {
+          "step": 27,
+          "tokens": 458752,
+          "val": 8.4034
+        },
+        {
+          "step": 37,
+          "tokens": 622592,
+          "val": 8.1843
+        },
+        {
+          "step": 52,
+          "tokens": 868352,
+          "val": 7.9275
+        },
+        {
+          "step": 72,
+          "tokens": 1196032,
+          "val": 7.3187
+        },
+        {
+          "step": 101,
+          "tokens": 1671168,
+          "val": 7.1049
+        },
+        {
+          "step": 141,
+          "tokens": 2326528,
+          "val": 6.9227
+        },
+        {
+          "step": 197,
+          "tokens": 3244032,
+          "val": 6.684
+        },
+        {
+          "step": 275,
+          "tokens": 4521984,
+          "val": 6.4307
+        },
+        {
+          "step": 383,
+          "tokens": 6291456,
+          "val": 6.2061
+        },
+        {
+          "step": 535,
+          "tokens": 8781824,
+          "val": 5.9938
+        },
+        {
+          "step": 747,
+          "tokens": 12255232,
+          "val": 5.7287
+        },
+        {
+          "step": 1043,
+          "tokens": 17104896,
+          "val": 5.5445
+        },
+        {
+          "step": 1457,
+          "tokens": 23887872,
+          "val": 5.4256
+        },
+        {
+          "step": 2034,
+          "tokens": 33341440,
+          "val": 5.3199
+        },
+        {
+          "step": 2840,
+          "tokens": 46546944,
+          "val": 5.2056
+        },
+        {
+          "step": 3966,
+          "tokens": 64995328,
+          "val": 5.0544
+        },
+        {
+          "step": 5538,
+          "tokens": 90750976,
+          "val": 4.9213
+        },
+        {
+          "step": 7732,
+          "tokens": 126697472,
+          "val": 4.7994
+        },
+        {
+          "step": 10796,
+          "tokens": 176898048,
+          "val": 4.714
+        },
+        {
+          "step": 15074,
+          "tokens": 246988800,
+          "val": 4.6492
+        },
+        {
+          "step": 21048,
+          "tokens": 344866816,
+          "val": 4.6155
+        },
+        {
+          "step": 29388,
+          "tokens": 481509376,
+          "val": 4.5531
+        },
+        {
+          "step": 41034,
+          "tokens": 672317440,
+          "val": 4.5851
+        },
+        {
+          "step": 57295,
+          "tokens": 938737664,
+          "val": 4.529
+        },
+        {
+          "step": 79999,
+          "tokens": 1310720000,
+          "val": 4.5104
+        }
+      ],
+      "final_val": 4.5104,
+      "median_tokens_per_second": 51911,
+      "median_mfu_percent": 4.19
+    }
+  ]
+}
