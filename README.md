@@ -44,3 +44,13 @@ Remove the
 
 ![RoPE frequency study](suning/rope_study/figures/base_sweep_seeds.png)
 
+### [RoPE ablation](jiayq/rope_ablation/)
+`jiayq/rope_ablation` · jiayq
+
+Remove **rotary position embeddings (RoPE)** from the transformer's attention. The no-RoPE model is
+not simply worse — it descends to CE 6.13 alongside the baseline, then **collapses** back to random
+(CE 10.40) by the end of training. A three-phase crash: surface learning → conflict accumulation →
+catastrophic forgetting. **Conclusion: RoPE is load-bearing infrastructure, not an optimization.**
+
+![RoPE ablation](jiayq/rope_ablation/rope_ablation.png)
+
