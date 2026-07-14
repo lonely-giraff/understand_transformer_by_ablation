@@ -59,10 +59,10 @@ core.
 
 ```bash
 # once: fetch a FineWeb shard (shared with the text exemplar)
-python exemplars/text_pretrain/data/download_shards.py
+python download_data.py
 
-python projects/example_residual_ablation/run.py     # trains baseline + no_residual (d6, minutes)
-python projects/example_residual_ablation/plot.py    # -> residual_ablation.png
+python run.py     # trains baseline + no_residual (d6, minutes)
+python plot.py    # -> residual_ablation.png
 ```
 
 Defaults to a tiny **d6** smoke scale (a couple of minutes on one GPU). Raise

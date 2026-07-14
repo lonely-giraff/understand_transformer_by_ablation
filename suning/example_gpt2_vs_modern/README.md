@@ -53,10 +53,10 @@ different architecture, not a tweak of GPT.
 
 ```bash
 # once: fetch a FineWeb shard (shared with the text exemplar)
-python exemplars/text_pretrain/data/download_shards.py
+python download_data.py
 
-python projects/example_gpt2_vs_modern/run.py     # trains modern + gpt2 (d6, minutes)
-python projects/example_gpt2_vs_modern/plot.py    # -> gpt2_vs_modern.png
+python run.py     # trains modern + gpt2 (d6, minutes)
+python plot.py    # -> gpt2_vs_modern.png
 ```
 
 ## Result
@@ -71,7 +71,7 @@ python projects/example_gpt2_vs_modern/plot.py    # -> gpt2_vs_modern.png
 | GPT-2 style | 5.84 |
 
 The modern architecture ends **~0.41 CE lower** — a real win, but an **incremental**
-one. (Contrast the [residual ablation](../example_residual_ablation/): removing the
+one. (Contrast the [residual ablation](https://github.com/suning-git/understand_transformer_by_ablation/tree/main/suning/example_residual_ablation): removing the
 residual connection costs +2.4 CE — *load-bearing*; the accumulation of RoPE /
 RMSNorm / ReLU² / no-bias is worth ~0.4 here.) The field moved for good reasons,
 but no single 2019→2025 change is make-or-break the way the residual is.

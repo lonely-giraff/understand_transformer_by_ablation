@@ -161,18 +161,18 @@ too; and specialization has more to specialize *for* at long context.)
 ## Run it
 
 ```bash
-python exemplars/text_pretrain/data/download_shards.py   # once: a FineWeb shard
+python download_data.py   # once: a FineWeb shard
 
 # train the sweeps (each writes results/<sweep>.json; ~2.5 min/arm at d6)
-python projects/rope_study/run.py            # Setup 1a: the 6 schedules
-python projects/rope_study/run.py base        # Setup 1b: base sweep (single-seed)
-python projects/rope_study/run.py single      # Setup 1c: single-frequency
-python projects/rope_study/run.py seeds       # noise floor: geom × 5 seeds
-python projects/rope_study/run.py baseseeds   # base × 5 seeds (the trend test)
-python projects/rope_study/run.py learn       # Setup 2: shared learnable δ
-python projects/rope_study/run.py perlayer    # Setup 2: per-layer learnable δ
+python run.py            # Setup 1a: the 6 schedules
+python run.py base        # Setup 1b: base sweep (single-seed)
+python run.py single      # Setup 1c: single-frequency
+python run.py seeds       # noise floor: geom × 5 seeds
+python run.py baseseeds   # base × 5 seeds (the trend test)
+python run.py learn       # Setup 2: shared learnable δ
+python run.py perlayer    # Setup 2: per-layer learnable δ
 
-python projects/rope_study/plots.py all       # render every figure into figures/
+python plots.py all       # render every figure into figures/
 ```
 
 ## Figures

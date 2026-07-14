@@ -9,6 +9,7 @@ git clone <this repo> && cd <this repo>
 python -m venv .venv && . .venv/bin/activate   # a fresh virtualenv
 pip install -r requirements.txt                # installs nanoinfra (the framework) as a library
 python download_data.py                        # fetch a couple of FineWeb shards
+python -m modalities.text.train_tokenizer      # train the tokenizer artifact (seconds)
 
 cd suning/example_gpt2_vs_modern               # any experiment folder
 python run.py                                  # train the arms (needs a CUDA GPU)
@@ -22,6 +23,46 @@ Each folder names its trunk as a LOCAL module and finds nanoinfra automatically,
 Fork this repo, add a folder `<yourname>/<your_experiment>/` (copy an existing one as a template — `spec.py` + `run.py` + `plot.py` + a local trunk module + a `README.md` with your finding), and open a pull request. One subdirectory per contributor: your PR only touches your own folder, so it never conflicts with anyone else.
 
 ---
+
+### [ReLU² → GELU Activation Ablation](ablations_shibo_dai/gelu_ablation/)
+`ablations_shibo_dai/gelu_ablation` · ablations_shibo_dai
+
+Negligible difference (Δ = 0.012 CE). ReLU² is a close numerical
+
+![ReLU² → GELU Activation Ablation](ablations_shibo_dai/gelu_ablation/gelu_ablation.png)
+
+### [QK-Norm Ablation](ablations_shibo_dai/qk_norm_ablation/)
+`ablations_shibo_dai/qk_norm_ablation` · ablations_shibo_dai
+
+No meaningful impact (Δ = 0.003 CE). QK-Norm is redundant at depth 6
+
+![QK-Norm Ablation](ablations_shibo_dai/qk_norm_ablation/qk_norm_ablation.png)
+
+### [RoPE → Learned Position Embedding Ablation](ablations_shibo_dai/rope_ablation/)
+`ablations_shibo_dai/rope_ablation` · ablations_shibo_dai
+
+RoPE provides a meaningful +0.266 CE improvement over learned
+
+![RoPE → Learned Position Embedding Ablation](ablations_shibo_dai/rope_ablation/rope_ablation.png)
+
+### [RoPE (Rotary Position Embedding) ablation](jiayq/rope_ablation/)
+`jiayq/rope_ablation` · jiayq
+
+
+
+![RoPE (Rotary Position Embedding) ablation](jiayq/rope_ablation/rope_ablation.png)
+
+### [Attn:MLP ratio ablation](linzh/attn_mlp_ratio/)
+`linzh/attn_mlp_ratio` · linzh
+
+
+
+### [Can one sequence-level loss replace dense next-token supervision?](ra88/next_token_supervision_ablation/)
+`ra88/next_token_supervision_ablation` · ra88
+
+
+
+![Can one sequence-level loss replace dense next-token supervision?](ra88/next_token_supervision_ablation/figures/shared_final_token_comparison.png)
 
 ### [example: GPT-2 vs a modern architecture](suning/example_gpt2_vs_modern/)
 `suning/example_gpt2_vs_modern` · suning
@@ -44,13 +85,10 @@ Remove the
 
 ![RoPE frequency study](suning/rope_study/figures/base_sweep_seeds.png)
 
-### [RoPE ablation](jiayq/rope_ablation/)
-`jiayq/rope_ablation` · jiayq
+### [non-uniform MLP depth allocation (D12, 1.31B tokens/arm, single seed)](wangbingfu3-ctrl/nonuniform_mlp_depth/)
+`wangbingfu3-ctrl/nonuniform_mlp_depth` · wangbingfu3-ctrl
 
-Remove **rotary position embeddings (RoPE)** from the transformer's attention. The no-RoPE model is
-not simply worse — it descends to CE 6.13 alongside the baseline, then **collapses** back to random
-(CE 10.40) by the end of training. A three-phase crash: surface learning → conflict accumulation →
-catastrophic forgetting. **Conclusion: RoPE is load-bearing infrastructure, not an optimization.**
 
-![RoPE ablation](jiayq/rope_ablation/rope_ablation.png)
+
+![non-uniform MLP depth allocation (D12, 1.31B tokens/arm, single seed)](wangbingfu3-ctrl/nonuniform_mlp_depth/nonuniform_mlp.png)
 
