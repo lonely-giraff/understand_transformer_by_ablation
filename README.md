@@ -92,3 +92,10 @@ Remove the
 
 ![non-uniform MLP depth allocation (D12, 1.31B tokens/arm, single seed)](wangbingfu3-ctrl/nonuniform_mlp_depth/nonuniform_mlp.png)
 
+### [MLP Expansion Ratio Ablation](qw/mlp_ratio_ablation/)
+`qw/mlp_ratio_ablation` · qw
+
+Compare 2x/4x/6x/8x MLP ratios — 8x wins at 200M tokens but returns diminish sharply (Δ < 0.05 CE vs 4x).
+
+![MLP Expansion Ratio Ablation](qw/mlp_ratio_ablation/mlp_ratio_ablation.png)
+
